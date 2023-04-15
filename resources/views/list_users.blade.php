@@ -7,8 +7,8 @@
             <h1>Danh Sách người dùng</h1><hr>
             @foreach($users as $data)
             <tr>
-                <td>{{$data->id}}.</td>
-                <td>Người dùng: </td><a href="{{route('detail_user',$data->id)}}">{{$data->name}}</a><br>
+                
+                <td>Người dùng {{$data->id}}: </td><a class="center" href="{{route('detail_user',$data->id)}}">{{$data->name}}</a><br>
             </tr>
             @endforeach
             </div>
