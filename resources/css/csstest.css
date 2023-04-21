@@ -4,6 +4,8 @@ body {
     margin: 0;
     height: 100vh;
     display: grid;
+    align-items: center;
+    justify-items: center;
     background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
 
@@ -82,6 +84,7 @@ path {
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    background-image: url("https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg");
     background-position: bottom center;
     background-size: cover;
 }
