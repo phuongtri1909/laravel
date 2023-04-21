@@ -46,14 +46,13 @@ class CustomAuthController extends Controller
         ]);
         $data = $request->all();
         if($request->hasFile('image')){
-            $destination_path = 'public/images/users';
+            $destination_path = 'public/images/users'; //php artisan storage:link
             $image = $request->file('image');
             $image_name = $image->getClientOriginalName();
             $path = $request->file('image')->storeAs($destination_path,$image_name);
             $data['image'] = $image_name;
         }
         $check = $this->create($data);
-
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
 
@@ -71,8 +70,8 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            $users = User::all();
-            $users = User::paginate(2);
+            $users = User::all();            
+            $users = User::paginate(3);
             return view('list_users',compact('users'));
         }
 
