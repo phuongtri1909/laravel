@@ -81,8 +81,10 @@ class CustomAuthController extends Controller
     public function signOut() {
         Session::flush();
         Auth::logout();
+
         return Redirect('login');
     }
+    
     public function getUserById($id){
         $users = User::where('id',$id)->first();
         return view('detail_user',compact('users'));

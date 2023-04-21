@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col">
             <div class="detail_user" style="text-align: center">
-                <h1>Trang chi tiết người dùng</h1><hr>
+                <h1>Trang chi tiết user</h1><hr>
                     <h4>tên người dùng: {{$users->name}}</h4>
                     <h4>số điện thoại: {{$users->phone}}</h4>
                     <h4>email: {{$users->email}}</h4>

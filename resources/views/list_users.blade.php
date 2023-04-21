@@ -4,11 +4,11 @@
     <div class="row">
         <div class="col">
             <div class="list_user" style="text-align: center">
-            <h1>Danh Sách người dùng</h1><hr>
+            <h1>Danh Sách User</h1><hr>
             @foreach($users as $data)
             <tr>
-                
-                <td>Người dùng {{$data->id}}: </td><a class="center" href="{{route('detail_user',$data->id)}}">{{$data->name}}</a><br>
+                <td>{{$data->id}}.</td>
+                <td>Người dùng: </td><a href="{{route('detail_user',$data->id)}}">{{$data->name}}</a><br>
             </tr>
             @endforeach
             </div>
